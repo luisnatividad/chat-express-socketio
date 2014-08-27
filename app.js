@@ -27,29 +27,6 @@ app.use('/', routes);
 app.use('/users', users);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
@@ -136,7 +113,7 @@ io.sockets.on('connection',function(socket){
 });
 */
 
-/*
+
 chat cocket.io
 var nicknames = [];
 io.sockets.on('connection',function(socket){
@@ -168,19 +145,3 @@ io.sockets.on('connection',function(socket){
     });
 });
 
-*/
-
-//push notification
-io.sockets.on('connection',function(socket){
-    socket.on('push',function(data,callback){
-        console.log('se ha recibido un push ' + data);  
-        io.sockets.emit('push','push en marcha');
-    });
-    
-    socket.on('user message',function(data){
-        io.sockets.emit('user message',{
-            nick: socket.nickname,
-            message: data
-        });
-    });
-});
