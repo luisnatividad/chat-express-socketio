@@ -1,0 +1,30 @@
+extends layout
+
+block content
+	h1 Real time notification
+	
+	
+	//div#message
+
+	//form(id="form", method="", action="")
+	//	input(type="text",placeholder="Escriba mensaje",class="mensaje")
+	//	input(type="submit", value="Enviar")
+
+	//button#ping Púlsame
+	
+	form(id="set-nickname", method="", action="")
+		input(type="text",id="nickname",placeholder="nickname")
+		input(type="submit", value="Guardar")
+	section#nicknames
+	form(id="send-message", method="", action="")
+		textarea(name="",id="message", cols="30", rows="10")
+		input(type="submit",value="Enviar mensaje")
+	section#messages
+
+	.buttons
+		button(class="win") WIN
+		button(class="fail") FAIL
+		button(class="lol") LOL
+		button(class="omg") OMG
+		button(class="wtf") WTF
+		button(class="cute") CUTE
