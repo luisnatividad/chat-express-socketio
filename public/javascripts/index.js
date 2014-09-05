@@ -46,6 +46,7 @@ $(function(){
 		return false;
 	});
 	socket.on('nicknames',function(data){
+		console.log('nicknames');
 		$('#nicknames').empty().append('<ul>');
 		for (var i = 0; i < data.length; i++) {
 			$('#nicknames ul').append('<li>'+data[i]+'</li>');
